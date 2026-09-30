@@ -1,28 +1,26 @@
-# Acme — Tech Standards
+# Acme — Tech Standards Wiki
 
-Standards and policies that apply to every Acme engineering team. Owned by the platform team; changes go through the Architecture Review Board (ARB).
+Company-wide engineering standards for every Acme team, kept as an **LLM-maintained wiki**. Owned by the platform team; policy changes go through the Architecture Review Board (ARB).
 
-If a team's own docs contradict something here, this repo wins unless the team has an approved exception (see [architecture/adr-process.md](architecture/adr-process.md)).
+If a team's own docs contradict these standards, the standards win unless the team has an approved exception ADR.
 
-## What's here
+## Start here
 
-### Architecture
-- [architecture/principles.md](architecture/principles.md) — architecture principles every service must follow.
-- [architecture/tech-radar.md](architecture/tech-radar.md) — approved, trial, and banned technologies.
-- [architecture/events.md](architecture/events.md) — event naming, schema, and Kafka conventions.
-- [architecture/adr-process.md](architecture/adr-process.md) — when and how to write an ADR; exception process.
+- [index.md](index.md) — catalog of every wiki page, by category.
+- [log.md](log.md) — what changed and when.
+- [CLAUDE.md](CLAUDE.md) — how the wiki is structured and maintained.
 
-### Security
-- [security/data-classification.md](security/data-classification.md) — data classes and handling rules.
-- [security/secrets.md](security/secrets.md) — secrets management rules.
-- [security/auth.md](security/auth.md) — service-to-service and user authentication.
+## Layout
 
-### Engineering
-- [engineering/api-guidelines.md](engineering/api-guidelines.md) — HTTP API conventions.
-- [engineering/incident-management.md](engineering/incident-management.md) — severity levels and incident process.
-
-### Reference
-- [glossary.md](glossary.md) — company-wide terms.
+```
+raw/     # Meeting transcripts where standards were decided. Immutable.
+wiki/    # LLM-maintained pages derived from raw/
+  standards/   # the current rules — what teams must follow
+  summaries/   # one digest per meeting: why, decisions, actions
+  concepts/    # cross-cutting ideas (idempotency, service tiers, …)
+  entities/    # tools, services, and bodies (Kafka, Auth0, ARB, …)
+  synthesis/   # higher-level pages combining several sources
+```
 
 ## What's not here
 
